@@ -21,7 +21,7 @@ before_script:
 
 script:
 - php vendor/bin/phpcs --standard=psr2 src/
-- php vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
+- php vendor/bin/phpunit --coverage-clover=coverage.clover
 
 after_script:
 - |
