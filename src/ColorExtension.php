@@ -76,16 +76,23 @@ class ColorExtension extends TwigExtension
     /**
      * @param string|Color $color
      * @param string|Color $backgroundColor
+     * @param string       $level
+     * @param int          $fontSize
      *
      * @return bool
      */
-    public function isReadable($color, $backgroundColor) : bool
+    public function isReadable($color, $backgroundColor, $level = 'AA', int $fontSize = 12) : bool
     {
         if (!$this->isValid($color) || !$this->isValid($backgroundColor)) {
             return false;
         }
 
-        return $this->parseColor($color)->isReadable($this->parseColor($backgroundColor));
+        return $this->parseColor($color)
+                    ->isReadable(
+                        $this->parseColor($backgroundColor),
+                        $level,
+                        $fontSize
+                    );
     }
 
     /**

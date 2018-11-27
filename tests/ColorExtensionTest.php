@@ -126,6 +126,10 @@ class ColorExtensionTest extends TestCase
         $this->assertRender('true', "{{ '000000' is color_dark ? 'true' : 'false' }}");
         $this->assertRender('false', "{{ '000000' is color_light ? 'true' : 'false' }}");
         $this->assertRender('true', "{{ '000000' is color_readable('FFFFFF') ? 'true' : 'false' }}");
+
+        $this->assertRender('false', "{{ 'FFFFFF' is color_readable('0099FF', 'AAA', 20) ? 'true' : 'false' }}");
+        $this->assertRender('true', "{{ 'FFFFFF' is color_readable('0099FF', 'AA', 20) ? 'true' : 'false' }}");
+
         $this->assertRender('false', "{{ '000000' is color_readable('000000') ? 'true' : 'false' }}");
         $this->assertRender('true', "{{ '663399' is color_has_name ? 'true' : 'false' }}");
         $this->assertRender('true', "{{ '000000' is color_has_name('000000') ? 'true' : 'false' }}");
