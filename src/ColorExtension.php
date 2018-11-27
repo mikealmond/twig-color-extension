@@ -107,7 +107,7 @@ class ColorExtension extends TwigExtension
             return false;
         }
 
-        return $this->parseColor($color)->brightnessDifference($this->parseColor($backgroundColor)) < 50;
+        return $this->parseColor($color)->luminosityContrast($this->parseColor($backgroundColor)) < 4.5;
     }
 
     /**
