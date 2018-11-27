@@ -193,7 +193,7 @@ class ColorExtension extends TwigExtension
     /**
      * @param string|Color $color
      *
-     * @return Color
+     * @return string
      */
     public function getMatchingTextColor($color) : string
     {
@@ -225,7 +225,7 @@ class ColorExtension extends TwigExtension
     /**
      * @param string|Color $color
      *
-     * @return Color|string
+     * @return string
      */
     public function getCssColorName($color) : string
     {
@@ -245,7 +245,7 @@ class ColorExtension extends TwigExtension
     /**
      * @param string|Color $color
      *
-     * @return Color|string
+     * @return string
      */
     public function getCssRgb($color) : string
     {
@@ -260,7 +260,7 @@ class ColorExtension extends TwigExtension
      * @param string|Color $color
      * @param float        $alpha
      *
-     * @return Color|string
+     * @return string
      */
     public function getCssRgba($color, float $alpha = 1.0) : string
     {
@@ -274,7 +274,7 @@ class ColorExtension extends TwigExtension
     /**
      * @param string|Color $color
      *
-     * @return Color|string
+     * @return string
      */
     public function getCssHsl($color) : string
     {
@@ -289,7 +289,7 @@ class ColorExtension extends TwigExtension
      * @param string|Color $color
      * @param float        $alpha
      *
-     * @return Color|string
+     * @return string
      */
     public function getCssHsla($color, float $alpha = 1.0) : string
     {
@@ -303,7 +303,7 @@ class ColorExtension extends TwigExtension
     /**
      * @param string|Color $color
      *
-     * @return Color|string
+     * @return string
      */
     public function getCssHex($color) : string
     {
