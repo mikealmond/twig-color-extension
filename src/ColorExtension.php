@@ -199,16 +199,17 @@ class ColorExtension extends TwigExtension
 
     /**
      * @param string|Color $color
+     * @param string       $default
      *
      * @return string
      */
-    public function getMatchingTextColor($color) : string
+    public function getMatchingTextColor($color, string $default = 'CCCCCC') : string
     {
         if (!$this->isValid($color)) {
-            return '333333';
+            return $default;
         }
 
-        return $this->parseColor($color)->getMatchingTextColor()->getHex();
+        return $this->parseColor($color)->getMatchingTextColor($default)->getHex();
     }
 
     /**

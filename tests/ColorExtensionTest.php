@@ -94,7 +94,8 @@ class ColorExtensionTest extends TestCase
         $this->assertRender('N0TACOL0R', "{{ 'N0TACOL0R'|color_complementary(30) }}");
         $this->assertRender('N0TACOL0R', "{{ 'N0TACOL0R'|color_darken(30) }}");
         $this->assertRender('N0TACOL0R', "{{ 'N0TACOL0R'|color_lighten(30) }}");
-        $this->assertRender('333333', "{{ 'N0TACOL0R'|color_text_color }}");
+        $this->assertRender('CCCCCC', "{{ 'N0TACOL0R'|color_text_color }}");
+        $this->assertRender('AAAAAA', "{{ 'N0TACOL0R'|color_text_color('AAAAAA') }}");
         $this->assertRender('N0TACOL0R', "{{ 'N0TACOL0R'|color_adjust_hue(180) }}");
     }
 
