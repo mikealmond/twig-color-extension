@@ -15,7 +15,7 @@
     "ext-ctype": "*",
     "ext-json": "*",
     "mikealmond/color": "^0.1.0",
-    "twig/twig": "^2.5"
+    "twig/twig": "^1.2|^2.5"
   },
   "require-dev": {
     "phpunit/phpunit": "~6.0",
