@@ -9,7 +9,7 @@ use MikeAlmond\Color\PaletteGenerator;
 use MikeAlmond\Color\Validator;
 use Twig\Extension;
 use Twig\TwigFilter;
-use Twig\SimpleTest;
+use Twig\TwigTest;
 
 /**
  * Class ColorExtension
