@@ -7,9 +7,9 @@ use MikeAlmond\Color\Color;
 use MikeAlmond\Color\CssGenerator;
 use MikeAlmond\Color\PaletteGenerator;
 use MikeAlmond\Color\Validator;
-use Twig_Extension as TwigExtension;
-use Twig_Filter as TwigFilter;
-use Twig_SimpleTest as TwigTest;
+use Twig\Extension;
+use Twig\TwigFilter;
+use Twig\SimpleTest;
 
 /**
  * Class ColorExtension
