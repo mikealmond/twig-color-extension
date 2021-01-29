@@ -19,7 +19,7 @@ $ composer require mikealmond/twig-color-extension
 
 ```twig
 {{ '0099FF'|color_darken(20)|color_css_rgba(0.9) }}
-{{ '0099FF' is color_is_dark ? 'dark' : 'light' }}
+{{ '0099FF' is color_dark ? 'dark' : 'light' }}
 {{ '0099FF'|color_complementary(30)|color_css_hex }}
 {{ '0099FF' is color_low_contrast ? 'default-color' : '0099FF'|color_css_hex }}
 

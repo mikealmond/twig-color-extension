@@ -108,7 +108,11 @@ class ColorExtensionTest extends TestCase
      */
     public function testInvalidFilters()
     {
-        $this->expectException(Twig_Error_Syntax::class);
+        if (class_exists('\\Twig_Error_Syntax')) {
+            $this->expectException(Twig_Error_Syntax::class);
+        } else {
+            $this->expectException(\Twig\Error\SyntaxError::class);
+        }
         $this->assertRender('hsla(204, 100%, 50%, 0.5)', "{{ '0099FF'|colour_css_hsla(0.5) }}");
     }
 
@@ -177,10 +181,17 @@ class ColorExtensionTest extends TestCase
      */
     protected function buildEnv($template)
     {
-        $loader = new \Twig_Loader_Array([
-            'template' => $template,
-        ]);
-        $twig   = new \Twig_Environment($loader);
+        if (class_exists('\\Twig_Loader_Array')) {
+            $loader = new \Twig_Loader_Array([
+                'template' => $template,
+            ]);
+            $twig   = new \Twig_Environment($loader);
+        } else {
+            $loader = new \Twig\Loader\ArrayLoader([
+                'template' => $template,
+            ]);
+            $twig   = new \Twig\Environment($loader);
+        }
 
         $twig->addExtension($this->getExtension());
 
