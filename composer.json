@@ -11,7 +11,7 @@
   "homepage": "https://github.com/mikealmond/twig-color-extension",
   "license": "MIT",
   "require": {
-    "php": "~7.0",
+    "php": ">=7.0",
     "ext-ctype": "*",
     "ext-json": "*",
     "mikealmond/color": "^0.1.0",
